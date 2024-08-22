@@ -1,3 +1,4 @@
+import random
 class personagem:
    def __init__(self,name,life,attack):
       self.name = name
@@ -9,6 +10,9 @@ class personagem:
    
    def getArmor(self,raridade):
       self.life += (raridade * 10)
+      
+   def getHurt(self,raridade):
+      self.life -= raridade * random.randint(1,3)
 
 pessoa = personagem("Carlos",100,10)
 pessoa.getWeapon()
