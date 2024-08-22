@@ -11,11 +11,12 @@ class personagem:
    def getArmor(self,raridade):
       self.life += (raridade * 10)
       
-   def getHurt(self,raridade):
+   def getHurt(self,raridade=1):
       self.life -= raridade * random.randint(1,3)
 
 pessoa = personagem("Carlos",100,10)
 pessoa.getWeapon()
 pessoa.getArmor(10)
+pessoa.getHurt(3)
 print(pessoa.attack)
 print(pessoa.life)
